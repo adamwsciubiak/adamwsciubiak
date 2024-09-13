@@ -1,9 +1,16 @@
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #c7c7c7;
+    color: #333;
+    padding: 20px;
+}
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -16,7 +23,7 @@ header {
     background-size: cover; /* Ensure the image covers the entire header */
     background-position: center; /* Center the background image */
     background-repeat: no-repeat; /* Prevent the image from repeating */
-    height: 30vh; /* Full viewport height */
+    height: 100vh; /* Full viewport height */
     display: flex; /* Enable flexbox for centering */
     align-items: center; /* Center content vertically */
     justify-content: center; /* Center content horizontally */
@@ -53,13 +60,8 @@ header p {
     background-color: #ff8f81;
 }
 
-main {
-    padding: 20px;
-}
-
 footer {
     text-align: center;
     margin-top: 50px;
     font-size: 0.9rem;
-    color: #333;
 }
