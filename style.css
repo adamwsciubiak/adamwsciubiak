@@ -20,7 +20,7 @@ header {
     display: flex;
     align-items: center;  /*Center content vertically */
     justify-content: center;  /* Center content horizontally */
-    color: #f6f6f6;
+    color: #EAE4D8;
     text-align: center;
     overflow: hidden; /* Ensure no overflow */
     margin-left: 0px;
