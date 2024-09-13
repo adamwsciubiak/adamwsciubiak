@@ -11,20 +11,51 @@ html, body {
 }
 
 header {
-    background-image: url('./media/profile/me.jpg');
+    background-image: url('./media/profile/header-bg.jpg'); /* Background image */
+    background-size: cover;
+    background-position: center top;
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #EAE4D8;
+    text-align: left;
+    overflow: hidden;
+}
+/* Gray overlay layer */
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 80vh;
+    width: 100vw;
+    background-color: #03030380; /* 30% opacity gray overlay */
+    z-index: 1; /* Under the content, above the background */
+}
+
+.header-content {
+    position: relative;
+    z-index: 2; /* Ensures content is above the overlay */
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    background-image: url('./media/profile/avatar.jpg');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    height: 80vh;
-    width: 100vw; /* Ensure the header takes up the full viewport width */
+    width: 150px; /* Adjust the size as needed */
+    height: 150px;
+    border-radius: 50%; /* Make it circular */
+    margin-right: 20px;
+}
+
+.text-content {
     display: flex;
-    align-items: center;  /*Center content vertically */
-    justify-content: center;  /* Center content horizontally */
-    color: #EAE4D8;
-    text-align: center;
-    overflow: hidden; /* Ensure no overflow */
-    margin-left: 0px;
-    margin-right: 0px;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 header h1 {
@@ -36,24 +67,26 @@ header p {
     font-size: 1.5rem;
     margin-bottom: 20px;
 }
-
 .buttons {
     display: flex;
     gap: 15px;
-    justify-content: center;
 }
 
 .buttons a.button {
-    background-color: #ddac1c;
+    background-color: transparent;
+    border-width: 5px;
+    border-radius: 5px;
+    border: 2px solid #EAE4D8;
     color: #EAE4D8;
     padding: 10px 20px;
     text-decoration: none;
-    border-radius: 5px;
+
     font-size: 1.2rem;
 }
 
 .buttons a.button:hover {
-    background-color: #ddad1cc2;
+    background-color: #EAE4D880;
+    border-color: #EAE4D8;
 }
 
 main {

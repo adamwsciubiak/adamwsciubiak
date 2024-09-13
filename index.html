@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="./media/profile/avatar.jpg" type="image/jpg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Adam Wściubiak - Psychologist, UX Designer, AI Researcher.">
     <title>Adam Wściubiak - Portfolio</title>
@@ -9,8 +10,10 @@
 </head>
 <body>
     <!-- Header Section with name, photo, and description -->
-    <header>
-        <div class="header-content">
+<header>
+    <div class="header-content">
+        <div class="avatar"></div>
+        <div class="text-content">
             <h1>Adam Wściubiak</h1>
             <p>PSYCHOLOGIST, UX RESEARCHER AND AI ENGINEER-wannabe</p>
             <div class="buttons">
@@ -20,7 +23,8 @@
                 <a href="#contact" class="button">Contact</a>
             </div>
         </div>
-    </header>
+    </div>
+</header>
 
     <!-- Main content -->
     <main>
@@ -105,27 +109,6 @@
     </footer>
     <!-- Link to external JavaScript file -->
     <!-- <script src="scripts.js"></script> -->
-   <!-- Add your JavaScript here, just before the closing body tag -->
-   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var iframe = document.getElementById('google-form');
-        iframe.onload = function () {
-            // Access the iframe content and remove header and footer
-            var formDocument = iframe.contentWindow.document;
 
-            // Remove the form title
-            var title = formDocument.querySelector('.freebirdFormviewerViewHeaderHeader');
-            if (title) {
-                title.style.display = 'none';
-            }
-
-            // Remove the form footer
-            var footer = formDocument.querySelector('.freebirdFormviewerViewFooterLegalDisclaimerContainer');
-            if (footer) {
-                footer.style.display = 'none';
-            }
-        };
-    });
-</script>
 </body>
 </html>
