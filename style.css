@@ -1,16 +1,103 @@
-/*
-Theme Name: Illdy
-Theme URI: http://colorlib.com/wp/themes/illdy/
-Author: Colorlib
-Author URI: http://colorlib.com
-Description: Illdy is a stunning multipurpose WordPress theme built based on Bootstrap frontend framework making it fully responsive and mobile friendly. This theme is well suited for business, landing page, portfolio or any other creative websites. This leaves heavy lifting to WordPress Customizer therefore you can create your website on live preview mode. Which means that you can see changes happen on your website in real time as you make them
-Version: 2.0.1
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: blog, e-commerce, portfolio
-Text Domain: illdy
 
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+header {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 50px 0;
+}
+.header-content img {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+.header-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+.header-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+.header-content .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.header-content .button {
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.header-content .button:hover {
+    background-color: #ff8f81;
+}
 
+main {
+    margin-top: 50px;
+}
+main h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+main p, ul, li {
+    margin-bottom: 20px;
+}
+main ul {
+    list-style-type: disc;
+    padding-left: 40px;
+}
+main a.button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+}
+main a.button:hover {
+    background-color: #555;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+form input, form textarea {
+    padding: 10px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 400px;
+}
+form button {
+    padding: 10px 20px;
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+form button:hover {
+    background-color: #ff8f81;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 0.9rem;
+}
