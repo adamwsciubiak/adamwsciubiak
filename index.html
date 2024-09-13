@@ -1,114 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Metadata for SEO and responsiveness -->
     <meta charset="UTF-8">
-    <link rel="icon" href="./media/profile/avatar.jpg" type="image/jpg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Adam Wściubiak - Psychologist, UX Designer, AI Researcher.">
+
+    <!-- Page title and favicon -->
     <title>Adam Wściubiak - Portfolio</title>
+    <link rel="icon" href="./media/profile/avatar.jpg" type="image/jpg">
+
+    <!-- Link to external stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header Section with name, photo, and description -->
-<header>
-    <div class="header-content">
-        <div class="avatar"></div>
-        <div class="text-content">
-            <h1>Adam Wściubiak</h1>
-            <p>PSYCHOLOGIST, UX RESEARCHER AND AI ENGINEER-wannabe</p>
-            <div class="buttons">
-                <a href="#research" class="button">Projects</a>
-                <a href="#experience" class="button">Experience</a>
-                <a href="#skills" class="button">Skills</a>
-                <a href="#contact" class="button">Contact</a>
+
+    <!-- Header Section: Contains profile picture, name, description, and navigation buttons -->
+    <header>
+        <div class="header-content">
+            <!-- Avatar container -->
+            <div class="avatar" aria-label="Profile picture of Adam Wściubiak"></div>
+
+            <!-- Textual content: Name, description, and navigation buttons -->
+            <div class="text-content">
+                <h1>Adam Wściubiak</h1>
+                <p>Psychologist with expertise in UX research, AI development, and cognitive-behavioral interventions.</p>
+
+                <!-- Navigation links to different sections of the page -->
+                <nav class="buttons">
+                    <a href="#projects" class="button">Projects</a>
+                    <a href="#experience" class="button">Experience</a>
+                    <a href="#skills" class="button">Skills</a>
+                    <a href="#contact" class="button">Contact</a>
+                    <!-- New Download CV button -->
+                    <a href="./media/profile/Adam Wsciubiak - CV.pdf" class="button" download>Download CV</a>
+                </nav>
             </div>
         </div>
-    </div>
-</header>
+    </header>
 
-    <!-- Main content -->
+    <!-- Main content area -->
     <main>
-        <!-- About Me Section -->
+        <!-- About Me Section: Brief description about the person -->
         <section id="about-me">
             <h2>About Me</h2>
-            <p>I am a psychologist with expertise in UX design, cognitive science, and artificial intelligence. My current research focuses on developing AI-driven cognitive-behavioral interventions for mental health. I hold a Master's degree in Psychology from the University of Wrocław and a postgraduate degree in UX & Product Design from SWPS University. My goal is to apply AI to create scalable, personalized tools for emotion regulation in educational and therapeutic settings.</p>
+            <p>I am a psychologist with a strong focus on UX design, cognitive science, and artificial intelligence. 
+            I hold a Master's degree in Psychology from the University of Wrocław and a postgraduate degree in UX & Product Design from SWPS University. 
+            My professional experience spans psychological diagnostics, emotion regulation, and neuropsychological therapy. Currently, 
+            my research focuses on using AI-driven cognitive-behavioral interventions to enhance emotion regulation in adult learners. 
+            I am passionate about the intersection of AI and mental health, and I aim to pursue a PhD in this field.</p>
         </section>
 
-        <!-- Projects Section -->
+        <!-- Projects Section: Showcases the person's projects -->
         <section id="projects">
             <h2>Projects</h2>
 
-            <!-- First Row: Text on left, Image on right -->
+            <!-- First project: Text on left, image on right -->
             <div class="row">
                 <div class="column-left">
-                    <p>My ongoing research involves the development of an Affective Intelligent Agent Model for enhancing emotion regulation in adult learners. This AI-driven model adapts to users' emotional states to provide personalized cognitive-behavioral interventions.</p>
+                    <p>My ongoing research involves the development of an Affective Intelligent Agent Model for enhancing emotion regulation in adult learners. 
+                    This AI-driven model adapts to users' emotional states to provide personalized cognitive-behavioral interventions.</p>
                 </div>
                 <div class="column-right">
-                    <img src="path/to/image1.jpg" alt="Project Image 1">
+                    <img src="path/to/image1.jpg" alt="Image of AI research project">
                 </div>
             </div>
 
-            <!-- Second Row: Image on left, Text on right -->
+            <!-- Second project: Image on left, text on right -->
             <div class="row">
                 <div class="column-left">
-                    <img src="path/to/image2.jpg" alt="Project Image 2">
+                    <img src="path/to/image2.jpg" alt="Project Image of Thesis Work">
                 </div>
                 <div class="column-right">
-                    <p>Past research includes my Master's thesis, "Mindfulness in Yoga Practitioners and Meditators and Affective-Stimulated Verbal Creativity," where I explored the relationship between mindfulness and creativity using mixed methods.</p>
+                    <p>For my Master's thesis, I explored the relationship between mindfulness and creativity in yoga practitioners. 
+                    The research utilized mixed methods, combining Linguistic Inquiry and Word Count (LIWC) analysis with competent judges' ratings to assess verbal creativity.</p>
                 </div>
             </div>
 
-            <!-- Third Row: Text on left, Image on right -->
+            <!-- Third project: Text on left, image on right -->
             <div class="row">
                 <div class="column-left">
-                    <p>I also worked on a wearable-based project to measure cognitive effort using EEG and heart rate data.</p>
+                    <p>I worked on a project to measure cognitive effort using EEG and heart rate data from wearable devices. 
+                    This project was recognized at Brainhack Krakow for its innovative approach to neurotechnology.</p>
                 </div>
                 <div class="column-right">
-                    <img src="path/to/image3.jpg" alt="Project Image 3">
+                    <img src="path/to/image3.jpg" alt="Image of wearable device project">
                 </div>
             </div>
         </section>
 
-        <!-- Skills and Experience Section -->
+        <!-- Skills and Experience Section: Lists skills and experience in two columns -->
         <section id="skills-experience">
             <div class="row">
-                <!-- Skills Column -->
+                <!-- Skills column -->
                 <div class="column-left">
                     <h2>Skills</h2>
                     <h3>Soft Skills</h3>
-                    <p>In-depth interviewing, psychological diagnostics, psychometry, and working with diverse age groups.</p>
+                    <p>In-depth interviewing, psychological diagnostics and psychometry, working with diverse age groups, and training and educating.</p>
                     <h3>Digital Skills</h3>
-                    <p>Proficient in Python, Julia, machine learning, prompt engineering, multi-agent systems, and UX/UI research. Experienced with tools such as Linguistic Inquiry and Word Count (LIWC).</p>
+                    <p>Proficient in Python, Julia, machine learning, prompt engineering, multi-agent LLMs, and UX/UI research.</p>
                 </div>
 
-                <!-- Experience Column -->
+                <!-- Experience column -->
                 <div class="column-right">
                     <h2>Experience</h2>
                     <h3>Academic Roles</h3>
-                    <p>Active in academic research, originating the Neuropsychology Student Club "Cerebro" and participating in forums like Brainhack Krakow and Neuromatch Academy.</p>
+                    <p>Founded the Neuropsychology Student Club "Cerebro" at the University of Wrocław, and participated in events such as Neuromatch Academy and Brainhack Krakow.</p>
                     <h3>Industry Experience</h3>
-                    <p>Worked as a psychologist and UX designer, leading a team to develop a medical documentation management app that was recognized for its innovation.</p>
+                    <p>Led a UX team developing a medical documentation app that was recognized for innovation. 
+                    Worked as a psychologist focusing on emotional and social skill development, and neuropsychological therapy.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
+        <!-- Contact Section: Methods for contacting the person -->
         <section id="contact">
-            <h2>Contact me on</h2>
-            <p><a href="mailto:wsciubiaka@gmail.com" target="_blank">a mail</a> or <a href="https://www.linkedin.com/in/adam-wsciubiak">LinkedIn</a> </p>
-            <p>or send a message below</p>
-            <div class="google-form-container">
-            <iframe id="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSdzfmBLWqfJM5uFIS80vJQJn-WOQ4KS5AH_x_6I9XZWppqFfA/viewform?embedded=true" width="640" height="645" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-            </div>
+            <h2>Contact Me</h2>
+            <form id="contact-form" action="https://formspree.io/f/xdknvdzk" method="POST">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+            <p>Or contact me directly via email: <a href="mailto:wsciubiaka@gmail.com">wsciubiaka@gmail.com</a></p>
+            <p>Phone: +48 886 301 566</p>
+            <p>LinkedIn: <a href="http://linkedin.com/in/adam-wsciubiak" target="_blank">linkedin.com/in/adam-wsciubiak</a></p>
         </section>
     </main>
 
-    <!-- Footer Section -->
+    <!-- Footer Section: Copyright information -->
     <footer>
         <p>&copy; 2024 Adam Wściubiak. All rights reserved.</p>
     </footer>
-    <!-- Link to external JavaScript file -->
-    <!-- <script src="scripts.js"></script> -->
 
 </body>
 </html>

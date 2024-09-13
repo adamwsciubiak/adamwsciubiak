@@ -87,15 +87,16 @@ header::before {
     flex-direction: column; /* Stack text elements vertically */
 }
 
-.text-content h1 {
-    font-size: 3rem;
-    font-weight: bold;
+/* Main heading inside the header */
+h1 {
+    font-size: 3rem; /* Large font size for the name */
 }
 
-.text-content p {
-    font-size: 1.5rem;
+/* Subheading inside the header */
+p {
+    font-size: 1.5rem; /* Subheading text size */
+    margin-bottom: 20px; /* Space below the subheading */
 }
-
 
 /* Button container inside the header */
 .buttons {
@@ -128,39 +129,9 @@ header::before {
     background-color: #EAE4D880; /* Light transparent background on hover */
 }
 
-/* Main content styles */
+/* General spacing between sections */
 main {
-    padding: 50px 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-}
-
-
-/* Section styling with yellow accent */
-section h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-    position: relative;
-    display: inline-block;
-    margin-left: 25px; /* Ensure uniform left margin */
-}
-
-section h2::before {
-    content: '';
-    position: absolute;
-    left: -25px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 10px;
-    height: 100%;
-    background-color: #FFCC00; /* Yellow accent */
-}
-
-/* Add padding to the projects section to ensure proper alignment */
-#projects, #skills {
-    padding-left: auto; /* Add left padding to the section */
+    margin-top: 50px; /* Space between header and main content */
 }
 
 /* About Me and Contact sections */
@@ -188,9 +159,9 @@ section h2::before {
 }
 
 /* Columns for text and images in Projects and Skills/Experience */
-#projects .column-left, #projects .column-right, #skills-experience .column-left, #skills-experience .column-right {
+#projects .column-left, #projects .column-right,
+#skills-experience .column-left, #skills-experience .column-right {
     width: 48%; /* Each column takes 48% of the row */
-    
 }
 
 /* Ensures images in the project section fit their container */
@@ -206,51 +177,49 @@ section h2::before {
     padding: 50px 0; /* Padding around the section */
 }
 
-/* Styling for the contact form */
 #contact-form {
-    max-width: 600px;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 #contact-form div {
     margin-bottom: 15px;
 }
+
 #contact-form label {
     font-weight: bold;
+    margin-bottom: 5px;
 }
 
 #contact-form input, #contact-form textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
     border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
 #contact-form button {
     background-color: #030303;
-    color: #fff;
-    padding: 10px 20px;
+    color: #EAE4D8;
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    padding: 10px 20px;
     font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
 #contact-form button:hover {
-    background-color: #FFCC00; /* Yellow hover effect */
+    background-color: #EAE4D880;
 }
 
-/* Footer styles */
+
+/* Footer styling */
 footer {
-    text-align: center;
-    padding: 20px;
-    font-size: 0.9rem;
-    background-color: #030303;
-    color: #fff;
-}
+    text-align: center; /* Center the text */
+    font-size: 0.9rem; /* Small text for the footer */
+    padding: 10px 0; /* Padding around the footer */
 
 /* Media queries for responsive design on smaller screens */
 @media (max-width: 300px) {
