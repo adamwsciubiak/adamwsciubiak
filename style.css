@@ -1,16 +1,9 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #c7c7c7;
-    color: #333;
-    padding: 20px;
-}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -23,7 +16,7 @@ header {
     background-size: cover; /* Ensure the image covers the entire header */
     background-position: center; /* Center the background image */
     background-repeat: no-repeat; /* Prevent the image from repeating */
-    height: 100vh; /* Full viewport height */
+    height: 30vh; /* Full viewport height */
     display: flex; /* Enable flexbox for centering */
     align-items: center; /* Center content vertically */
     justify-content: center; /* Center content horizontally */
@@ -39,29 +32,77 @@ header h1 {
 header p {
     font-size: 1.5rem; /* Adjust description size */
     margin-bottom: 20px;
-}
 
-.buttons {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-}
-
-.buttons a.button {
-    background-color: #ff6f61;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.2rem;
-}
-
-.buttons a.button:hover {
-    background-color: #ff8f81;
-}
-
-footer {
-    text-align: center;
-    margin-top: 50px;
-    font-size: 0.9rem;
+    .header-content .buttons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+    .header-content .button {
+        background-color: #ff6f61;
+        color: #fff;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+    .header-content .button:hover {
+        background-color: #ff8f81;
+    }
+    
+    main {
+        margin-top: 50px;
+    }
+    main h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+        color: #333;
+    }
+    main p, ul, li {
+        margin-bottom: 20px;
+    }
+    main ul {
+        list-style-type: disc;
+        padding-left: 40px;
+    }
+    main a.button {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        display: inline-block;
+        margin-top: 10px;
+    }
+    main a.button:hover {
+        background-color: #555;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    form input, form textarea {
+        padding: 10px;
+        font-size: 1rem;
+        width: 100%;
+        max-width: 400px;
+    }
+    form button {
+        padding: 10px 20px;
+        background-color: #ff6f61;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+    form button:hover {
+        background-color: #ff8f81;
+    }
+    
+    footer {
+        text-align: center;
+        margin-top: 50px;
+        font-size: 0.9rem;
+        color: #333;
+    }
 }
