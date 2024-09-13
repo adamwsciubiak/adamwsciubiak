@@ -1,0 +1,110 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+header {
+    background-image: url('./media/profile/me.jpg'); /* Path to your image */
+    background-size: cover; /* Make sure the image covers the entire header */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background from repeating */
+    height: 100vh; /* Set the header height to take the full viewport height */
+    display: flex; /* To align the content properly */
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
+    color: white; /* Text color on top of the image */
+    text-align: center; /* Center the text */
+}
+}
+.header-content img {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+.header-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+.header-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+.header-content .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.header-content .button {
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.header-content .button:hover {
+    background-color: #ff8f81;
+}
+
+main {
+    margin-top: 50px;
+}
+main h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+main p, ul, li {
+    margin-bottom: 20px;
+}
+main ul {
+    list-style-type: disc;
+    padding-left: 40px;
+}
+main a.button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+}
+main a.button:hover {
+    background-color: #555;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+form input, form textarea {
+    padding: 10px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 400px;
+}
+form button {
+    padding: 10px 20px;
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+form button:hover {
+    background-color: #ff8f81;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 0.9rem;
+}
