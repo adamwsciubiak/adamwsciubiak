@@ -269,13 +269,22 @@ footer {
 
 /* Media queries for responsive design on smaller screens */
 /* Media query for narrower screens (below 768px) */
-@media (max-width: 1080px) {
+@media (max-width: 2532px) {
     .avatar {
         width: 120px;  /* Ensure width stays proportional */
         height: 120px; /* Ensure height equals width */
     }
     .header-content {
-    top: 3rem; /* Move text down by 3rem */
+        top: 3rem; /* Move text down by 3rem */
+    }
+}
+@media (max-width: 1180px) {
+    .avatar {
+        width: 120px;  /* Ensure width stays proportional */
+        height: 120px; /* Ensure height equals width */
+    }
+    .header-content {
+    top: 1rem; /* Move text down by 3rem */
     }
 }
 
@@ -299,7 +308,6 @@ footer {
         height: 80vh
     }
 
-}
 }
 
 /* Media query for smallest screens (below 320px) */
