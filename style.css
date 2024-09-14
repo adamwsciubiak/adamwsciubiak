@@ -278,9 +278,12 @@ footer {
         width: 150px;  /* Ensure width stays proportional */
         height: 150px; /* Ensure height equals width */
     }
+    header {
+        hight: 100vh
+    }
     .header-content {
         
-        top: 1rem; /* Move text down by 3rem */
+        top: 10rem; /* Move text down by 3rem */
     }
 }
 @media (max-width: 768px) {
