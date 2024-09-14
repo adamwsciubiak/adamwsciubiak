@@ -306,7 +306,7 @@ footer {
         font-size: 1.2rem;
     }
     .header-content {
-        top: 0.5rem; /* Move text down by 3rem */
+        top: 5rem; /* Move text down by 3rem */
     }
 
 }
