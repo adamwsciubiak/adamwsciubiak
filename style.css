@@ -272,13 +272,12 @@ footer {
 @media (orientation: landscape) {
     .header-content{
         top: 3rem;
-        width: 120vw;
     }
 }
 @media (orientation: portrait) {
     /* Styles for portrait mode */
     .header-content {
-        top: 1rem; /* Example: change background color */
+        top: 2rem; /* Example: change background color */
     }
 }
 
