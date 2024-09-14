@@ -272,12 +272,14 @@ footer {
 @media (orientation: landscape) {
     .header-content{
         top: 5rem;
+        hight: 100%;
     }
 }
 
 @media (orientation: portrait) {
     .header-content{
         top: 2rem;
+        hight: 100%;
     }
 }
 
