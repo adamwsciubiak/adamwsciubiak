@@ -287,7 +287,7 @@ footer {
         height: 120px; /* Ensure height equals width */
     }
     .header-content {
-        top: 1rem; /* Move text down by 3rem */
+        top: 5rem; /* Move text down by 3rem */
     }
 }
 
