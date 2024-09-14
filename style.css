@@ -271,11 +271,11 @@ footer {
 /* Media query for narrower screens (below 768px) */
 @media (max-width: 1170px) {
     .avatar {
-        width: 120px;  /* Ensure width stays proportional */
-        height: 120px; /* Ensure height equals width */
+        width: 150px;  /* Ensure width stays proportional */
+        height: 150px; /* Ensure height equals width */
     }
     .header-content {
-        top: 3rem; /* Move text down by 3rem */
+        top: 5rem; /* Move text down by 3rem */
     }
 }
 @media (max-width: 768px) {
@@ -284,7 +284,7 @@ footer {
         height: 120px; /* Ensure height equals width */
     }
     .header-content {
-    top: 5rem; /* Move text down by 3rem */
+        top: 3rem; /* Move text down by 3rem */
     }
 }
 
