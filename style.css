@@ -279,7 +279,7 @@ footer {
         height: 150px; /* Ensure height equals width */
     .header-content {
         
-        top: 10rem; /* Move text down by 3rem */
+        top: 3rem; /* Move text down by 3rem */
     }
 }
 @media (max-width: 768px) {
@@ -291,7 +291,7 @@ footer {
         height: 100vh
     }
     .header-content {
-        top: 3rem; /* Move text down by 3rem */
+        top: 1rem; /* Move text down by 3rem */
     }
 }
 
