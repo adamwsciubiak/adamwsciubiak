@@ -283,9 +283,6 @@ footer {
         width: 120px;  /* Ensure width stays proportional */
         height: 120px; /* Ensure height equals width */
     }
-    .header-content {
-        top: 3rem; /* Move text down by 3rem */
-    }
 }
 
 /* Media query for very narrow screens (below 480px) */
