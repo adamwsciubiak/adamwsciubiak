@@ -291,7 +291,7 @@ footer {
         height: 100vh
     }
     .header-content {
-        top: 1rem; /* Move text down by 3rem */
+        top: 10rem; /* Move text down by 3rem */
     }
 }
 
@@ -307,9 +307,6 @@ footer {
            /* Adjust paragraph font size */
     p {
         font-size: 1.2rem;
-    }
-    .header-content {
-        top: 1rem; /* Move text down by 3rem */
     }
 
 }
