@@ -274,10 +274,16 @@ footer {
         top: 3rem;
     }
 }
+@media (orientation: portrait) {
+    /* Styles for portrait mode */
+    body {
+        top: 1rem; /* Example: change background color */
+    }
+}
 
 @media (max-width: 2532px) {
     .header-content{
-        top: 1rem;
+
     }
 
 @media (max-width: 1170px) {
@@ -285,7 +291,7 @@ footer {
         width: 150px;  /* Ensure width stays proportional */
         height: 150px; /* Ensure height equals width */
     .header-content {
-        top: 1rem; /* Move text down by 3rem */
+         /* Move text down by 3rem */
     }
 }
 @media (max-width: 768px) {
@@ -294,7 +300,7 @@ footer {
         height: 120px; /* Ensure height equals width */
     }
     .header-content {
-        top: 1rem; /* Move text down by 3rem */
+     /* Move text down by 3rem */
     }
 }
 
@@ -312,7 +318,7 @@ footer {
         font-size: 1.2rem;
     }
     .header-content {
-        top: 5rem; /* Move text down by 3rem */
+     /* Move text down by 3rem */
     }
 
 }
