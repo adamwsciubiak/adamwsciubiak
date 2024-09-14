@@ -285,7 +285,6 @@ footer {
         width: 150px;  /* Ensure width stays proportional */
         height: 150px; /* Ensure height equals width */
     .header-content {
-        top: 3rem;
          /* Move text down by top: 3rem;
     }
 }
@@ -295,7 +294,7 @@ footer {
         height: 120px; /* Ensure height equals width */
     }
     .header-content {
-        top: 2rem;
+        top: 3rem;
      /* Move text down by 3rem */
     }
 }
@@ -314,7 +313,7 @@ footer {
         font-size: 1.2rem;
     }
     .header-content {
-        top: 1rem
+        top: 2rem
      /* Move text down by 3rem */
     }
 
