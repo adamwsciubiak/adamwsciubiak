@@ -269,7 +269,7 @@ footer {
 
 /* Media queries for responsive design on smaller screens */
 /* Media query for narrower screens (below 768px) */
-@media (max-width: 2532px) {
+@media (max-width: 1170px) {
     .avatar {
         width: 120px;  /* Ensure width stays proportional */
         height: 120px; /* Ensure height equals width */
