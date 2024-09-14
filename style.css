@@ -100,9 +100,11 @@ header::before {
 /* Button container inside the header */
 .buttons {
     display: flex;
+    height: 3vh
     flex-wrap: wrap; /* Allow buttons to wrap into a second row */
     gap: 1vw; /* Space between buttons */
     justify-content: flex-start; /* Align the buttons to the left */
+    
 }
 /* Button styling */
 .buttons a.button {
