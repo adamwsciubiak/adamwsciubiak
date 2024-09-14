@@ -1,4 +1,7 @@
 /* Global reset for margins, padding, box-sizing, and full width/height */
+html {
+    scroll-behavior: smooth;
+}
 html, body {
     margin: 0;
     padding: 0;
@@ -43,6 +46,7 @@ header::before {
     z-index: 2; /* Ensure content is above the overlay */
     display: flex; /* Flexbox to align avatar and text */
     align-items: center; /* Center the content vertically */
+
 }
 
 /* Avatar styling for larger screens */
@@ -50,34 +54,11 @@ header::before {
     background-image: url('./media/profile/avatar.jpg');
     background-size: cover;
     background-position: center;
-    width: 150px;  /* Set width */
-    height: 150px; /* Set height equal to width */
+    width: 175px;  /* Set width */
+    height: 175px; /* Set height equal to width */
     border-radius: 50%; /* Ensure the avatar is round */
     margin-right: 20px;
     flex-shrink: 0; /* Prevent the avatar from shrinking or stretching */
-}
-
-/* Media query for narrower screens (below 768px) */
-@media (max-width: 768px) {
-    .avatar {
-        width: 120px;  /* Ensure width stays proportional */
-        height: 120px; /* Ensure height equals width */
-    }
-}
-
-/* Media query for very narrow screens (below 480px) */
-@media (max-width: 480px) {
-    .avatar {
-        width: 90px;  /* Smaller width */
-        height: 90px; /* Height equals width to maintain circular shape */
-    }
-}
-
-/* Media query for smallest screens (below 320px) */
-@media (max-width: 320px) {
-    .avatar {
-        display: none; /* Hide avatar on extremely small screens */
-    }
 }
 
 
@@ -107,7 +88,7 @@ header::before {
 /* Social media icons */
 .social-media-icons a {
     color: #EAE4D8; /* Icon color */
-    font-size: 1.5rem; /* Icon size */
+    font-size: 1.7rem; /* Icon size */
     transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition on hover */
 }
 
@@ -120,12 +101,16 @@ header::before {
 .buttons {
     display: flex;
     flex-wrap: wrap; /* Allow buttons to wrap into a second row */
-    gap: 0.5vw; /* Space between buttons */
+    gap: 1vw; /* Space between buttons */
     justify-content: flex-start; /* Align the buttons to the left */
 }
 /* Button styling */
 .buttons a.button {
+    display: flex; /* Flexbox to center content */
+    align-items: center; /* Vertically center text */
+    justify-content: center; /* Horizontally center text */
     flex: 1 1 20%; /* Each button takes roughly 22% of the container width (4 buttons per row) */
+    flex-wrap: wrap;
     background-color: transparent;
     border: 0.2rem solid #EAE4D8;
     color: #EAE4D8;
@@ -133,8 +118,10 @@ header::before {
     text-decoration: none;
     font-size: 1rem;
     border-radius: 0.5rem;
+    align-items: center;
     text-align: center;
-    transition: color 0.3s ease, transform 0.3s ease; /* Transition for hover effect */
+    transition: color 0.5s ease, transform 0.5s ease; /* Transition for hover effect */
+    flex-grow: 1; /* Make all buttons grow equally */
 }
 
 /* Hover effect for all buttons */
@@ -153,7 +140,7 @@ header::before {
 
 /* Main content styles */
 main {
-    padding: 50px 10px;
+    padding: 2vh 5vw;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -279,33 +266,44 @@ footer {
 }
 
 /* Media queries for responsive design on smaller screens */
-@media (max-width: 300px) {
-    /* Adjust header height on smaller screens */
-    header {
-        height: 60vh; /* Decrease height to 60% of viewport */
-    }
-
-    /* Reduce avatar size on smaller screens */
+/* Media query for narrower screens (below 768px) */
+@media (max-width: 768px) {
     .avatar {
-        width: 120px;
-        height: 120px;
+        width: 120px;  /* Ensure width stays proportional */
+        height: 120px; /* Ensure height equals width */
     }
+}
 
+/* Media query for very narrow screens (below 480px) */
+@media (max-width: 480px) {
+    .avatar {
+        width: 90px;  /* Smaller width */
+        height: 90px; /* Height equals width to maintain circular shape */
+    }
     /* Adjust font size for the main heading */
     h1 {
         font-size: 2rem;
-    }
-
-    /* Adjust paragraph font size */
+           /* Adjust paragraph font size */
     p {
         font-size: 1.2rem;
     }
 
+}
+}
+
+/* Media query for smallest screens (below 320px) */
+@media (max-width: 320px) {
+    header {
+        height: 60vh; /* Decrease height to 60% of viewport */
+    }
+
+    .avatar {
+        display: none; /* Hide avatar on extremely small screens */
+    }
     /* Set full width for columns on smaller screens */
     #projects .column-left, #projects .column-right,
     #skills-experience .column-left, #skills-experience .column-right {
         width: 100%; /* Full width on mobile */
         margin-bottom: 30px; /* Add space between stacked columns */
     }
-}
 }
