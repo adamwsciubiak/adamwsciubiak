@@ -269,13 +269,17 @@ footer {
 
 /* Media queries for responsive design on smaller screens */
 /* Media query for narrower screens (below 768px) */
+@media (max-width: 2532px) {
+    .header-content{
+        top: 10rem
+    }
 @media (max-width: 1170px) {
     .avatar {
         width: 150px;  /* Ensure width stays proportional */
         height: 150px; /* Ensure height equals width */
     }
     .header-content {
-        top: 5rem; /* Move text down by 3rem */
+        top: 1rem; /* Move text down by 3rem */
     }
 }
 @media (max-width: 768px) {
