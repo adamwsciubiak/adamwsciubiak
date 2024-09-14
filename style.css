@@ -271,13 +271,13 @@ footer {
 /* Media query for narrower screens (below 768px) */
 @media (orientation: landscape) {
     .header-content{
-        top: 2rem;
+        top: 3rem;
     }
 }
 @media (orientation: portrait) {
     /* Styles for portrait mode */
     body {
-        top: 3.5rem; /* Example: change background color */
+        top: 4rem; /* Example: change background color */
     }
 }
 
