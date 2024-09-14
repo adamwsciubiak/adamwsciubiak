@@ -301,11 +301,8 @@ footer {
     p {
         font-size: 1.2rem;
     }
-    .header-content {
-    top: 1rem; /* Move text down by 5rem */
-    }
     header {
-        height: 80vh
+        height: 100vh
     }
 
 }
