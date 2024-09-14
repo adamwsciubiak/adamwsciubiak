@@ -271,7 +271,7 @@ footer {
 /* Media query for narrower screens (below 768px) */
 @media (max-width: 2532px) {
     .header-content{
-        top: 5rem;
+        top: 1rem;
     }
 
 @media (max-width: 1170px) {
