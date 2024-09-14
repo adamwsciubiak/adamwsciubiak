@@ -100,7 +100,6 @@ header::before {
 /* Button container inside the header */
 .buttons {
     display: flex;
-    height: 3vh
     flex-wrap: wrap; /* Allow buttons to wrap into a second row */
     gap: 1vw; /* Space between buttons */
     justify-content: flex-start; /* Align the buttons to the left */
@@ -122,6 +121,7 @@ header::before {
     border-radius: 0.5rem;
     align-items: center;
     text-align: center;
+    height: 4rem; /* Set a fixed height for all buttons */
     transition: color 0.5s ease, transform 0.5s ease; /* Transition for hover effect */
     flex-grow: 1; /* Make all buttons grow equally */
 }
