@@ -271,7 +271,7 @@ footer {
 /* Media query for narrower screens (below 768px) */
 @media (orientation: landscape) {
     .header-content{
-        top: 3rem;
+        top: 5rem;
     }
 }
 
