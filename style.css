@@ -288,7 +288,7 @@ footer {
         height: 120px; /* Ensure height equals width */
     }
     .header-content {
-        top: 5rem; /* Move text down by 3rem */
+        top: 2rem; /* Move text down by 3rem */
     }
 }
 
@@ -304,6 +304,9 @@ footer {
            /* Adjust paragraph font size */
     p {
         font-size: 1.2rem;
+    }
+    .header-content {
+        top: 1rem; /* Move text down by 3rem */
     }
 
 }
