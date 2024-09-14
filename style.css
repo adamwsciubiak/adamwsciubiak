@@ -269,47 +269,56 @@ footer {
 
 /* Media queries for responsive design on smaller screens */
 /* Media query for narrower screens (below 768px) */
-@media (orientation: landscape) {
+@media (orientation: landscape), (max-width:768px) {
+    header {
+        height: auto; /* Let the height adjust based on the content */
+        width: auto;
+        min-height: 70vh; /* Ensure a minimum height for smaller devices */
+        padding: 2rem 1rem; /* Add padding to prevent content from touching the edges */
+    }
+
     .header-content{
         top: 5rem;
-        hight: 100%;
     }
 }
 
 @media (orientation: portrait) {
+    header {
+        height: auto; /* Let the height adjust based on the content */
+        min-height: 70vh; /* Ensure a minimum height for smaller devices */
+        padding: 2rem 1rem; /* Add padding to prevent content from touching the edges */
+    }
+
     .header-content{
         top: 2rem;
-        hight: 100%;
+        height: auto;
     }
 }
 
-
-@media (max-width: 2532px) {
-    .header-content{
-        top: 3rem;
-    }
-
-@media (max-width: 1170px) {
-    .avatar {
-        width: 150px;  /* Ensure width stays proportional */
-        height: 150px; /* Ensure height equals width */
-    .header-content {
-         /* Move text down by top: 3rem;
-    }
-}
 @media (max-width: 768px) {
+    header {
+        height: auto; /* Let the height adjust based on the content */
+        min-height: 70vh; /* Ensure a minimum height for smaller devices */
+        padding: 2rem 1rem; /* Add padding to prevent content from touching the edges */
+    }
     .avatar {
         width: 120px;  /* Ensure width stays proportional */
         height: 120px; /* Ensure height equals width */
     }
     .header-content {
-        top: 3rem;
+        top: 2rem;
      /* Move text down by 3rem */
     }
 }
 
 /* Media query for very narrow screens (below 480px) */
 @media (max-width: 480px) {
+    header {
+        height: auto; /* Let the height adjust based on the content */
+        min-height: 70vh; /* Ensure a minimum height for smaller devices */
+        padding: 2rem 1rem; /* Add padding to prevent content from touching the edges */
+    }
+
     .avatar {
         width: 90px;  /* Smaller width */
         height: 90px; /* Height equals width to maintain circular shape */
@@ -318,12 +327,12 @@ footer {
     h1 {
         font-size: 2rem;
            /* Adjust paragraph font size */
+    }
     p {
         font-size: 1.2rem;
     }
-    .header-content {
-        top: 2rem
-     /* Move text down by 3rem */
+    header {
+        height: auto; /* Let the height adjust based on the content */
     }
 
 }
@@ -331,8 +340,11 @@ footer {
 /* Media query for smallest screens (below 320px) */
 @media (max-width: 320px) {
     header {
-        height: 100vh; /* Decrease height to 60% of viewport */
+        height: auto; /* Let the height adjust based on the content */
+        min-height: 70vh; /* Ensure a minimum height for smaller devices */
+        padding: 2rem 1rem; /* Add padding to prevent content from touching the edges */
     }
+
 
     .avatar {
         display: none; /* Hide avatar on extremely small screens */
