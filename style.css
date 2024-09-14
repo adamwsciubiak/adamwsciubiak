@@ -272,13 +272,12 @@ footer {
 @media (orientation: landscape) {
     .header-content{
         top: 3rem;
-        hight: 100%
     }
 }
 
 @media (max-width: 2532px) {
     .header-content{
-
+        top: 3rem;
     }
 
 @media (max-width: 1170px) {
