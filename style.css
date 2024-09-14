@@ -277,10 +277,6 @@ footer {
     .avatar {
         width: 150px;  /* Ensure width stays proportional */
         height: 150px; /* Ensure height equals width */
-    }
-    header {
-        hight: 100vh
-    }
     .header-content {
         
         top: 10rem; /* Move text down by 3rem */
@@ -295,7 +291,6 @@ footer {
         height: 100vh
     }
     .header-content {
-        
         top: 3rem; /* Move text down by 3rem */
     }
 }
@@ -312,9 +307,6 @@ footer {
            /* Adjust paragraph font size */
     p {
         font-size: 1.2rem;
-    }
-    header {
-        height: 100vh
     }
     .header-content {
         top: 1rem; /* Move text down by 3rem */
