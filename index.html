@@ -12,6 +12,7 @@
 
     <!-- Link to external stylesheet -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
@@ -24,13 +25,31 @@
             <!-- Textual content: Name, description, and navigation buttons -->
             <div class="text-content">
                 <h1>Adam Wściubiak</h1>
+                <div class="social-media-icons">
+                    <a href="https://www.instagram.com/neuromancer__/" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/adam-wsciubiak" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/Neurux" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <!-- <a href="https://www.instagram.com/neuromancer__/" target="_blank" aria-label="Google-Scholar">
+                        <i class="fa-brands fa-google-scholar"></i>
+                    </a> -->
+                    <a href="https://www.researchgate.net/profile/Adam-Wsciubiak" target="_blank" aria-label="ResearchGate">
+                        <i class="fab fa-researchgate"></i>
+                    </a>
+                </div>                
                 <p>Psychologist with expertise in UX research, AI development, and cognitive-behavioral interventions.</p>
 
                 <!-- Navigation links to different sections of the page -->
                 <nav class="buttons">
+                    <a href="#about-me" class="button">About me</a>
+                    <a href="#skills-experience" class="button">Skills and experience</a>
                     <a href="#projects" class="button">Projects</a>
-                    <a href="#experience" class="button">Experience</a>
-                    <a href="#skills" class="button">Skills</a>
                     <a href="#contact" class="button">Contact</a>
                     <!-- New Download CV button -->
                     <a href="./media/profile/Adam Wsciubiak - CV.pdf" class="button" download>Download CV</a>
@@ -51,42 +70,6 @@
             I am passionate about the intersection of AI and mental health, and I aim to pursue a PhD in this field.</p>
         </section>
 
-        <!-- Projects Section: Showcases the person's projects -->
-        <section id="projects">
-            <h2>Projects</h2>
-
-            <!-- First project: Text on left, image on right -->
-            <div class="row">
-                <div class="column-left">
-                    <p>My ongoing research involves the development of an Affective Intelligent Agent Model for enhancing emotion regulation in adult learners. 
-                    This AI-driven model adapts to users' emotional states to provide personalized cognitive-behavioral interventions.</p>
-                </div>
-                <div class="column-right">
-                    <img src="./media/profile/medifiles.JPG" alt="Image of AI research project">
-                </div>
-            </div>
-
-            <!-- Second project: Image on left, text on right -->
-            <div class="row">
-                <div class="column-left">
-                    <img src="./media/profile/magisterka.JPG" alt="Project Image of Thesis Work">
-                </div>
-                <div class="column-right">
-                    <p>For my Master's thesis, I explored the relationship between mindfulness and creativity in yoga practitioners. 
-                    The research utilized mixed methods, combining Linguistic Inquiry and Word Count (LIWC) analysis with competent judges' ratings to assess verbal creativity.</p>
-                </div>
-            </div>
-
-            <!-- Third project: Text on left, image on right -->
-            <div class="row">
-                <div class="column-left">
-                    <p>NMA Cognitive neuroscience summer school txt</p>
-                </div>
-                <div class="column-right">
-                    <img src="./media/profile/nma.JPG" alt="Image of wearable device project">
-                </div>
-            </div>
-        </section>
 
         <!-- Skills and Experience Section: Lists skills and experience in two columns -->
         <section id="skills-experience">
@@ -111,7 +94,45 @@
                 </div>
             </div>
         </section>
+        <!-- Projects Section: Showcases the person's projects -->
+        <section id="projects">
+            <h2>Projects</h2>
 
+            <!-- First project: Text on left, image on right -->
+            <div class="row">
+                <div class="column-left">
+                    <p>My ongoing research involves the development of an Affective Intelligent Agent Model for enhancing emotion regulation in adult learners. 
+                    This AI-driven model adapts to users' emotional states to provide personalized cognitive-behavioral interventions.</p>
+                </div>
+                <div class="column-right">
+                    <img src="./media/profile/medifiles.JPG" alt="Image of AI research project">
+                </div>
+            </div>
+
+
+            <!-- Second project: Image on left, text on right -->
+            <div class="row">
+                <div class="column-left">
+                    <img src="./media/profile/magisterka.JPG" alt="Project Image of Thesis Work">
+                </div>
+                <div class="column-right">
+                    <p>For my Master's thesis, I explored the relationship between mindfulness and creativity in yoga practitioners. 
+                    The research utilized mixed methods, combining Linguistic Inquiry and Word Count (LIWC) analysis with competent judges' ratings to assess verbal creativity.</p>
+                </div>
+            </div>
+
+            <!-- Third project: Text on left, image on right -->
+            <div class="row">
+                <div class="column-left">
+                    <p>NMA Cognitive neuroscience summer school txt</p>
+                </div>
+                <div class="column-right">
+                    <img src="./media/profile/nma.JPG" alt="Image of wearable device project">
+                </div>
+            </div>
+        </section>
+
+        
         <!-- Contact Section: Methods for contacting the person -->
         <section id="contact">
             <h2>Contact Me</h2>
@@ -130,8 +151,10 @@
                 </div>
                 <button type="submit">Send Message</button>
             </form>
-            <p>Or contact me directly via email: <a href="mailto:wsciubiaka@gmail.com">wsciubiaka@gmail.com</a></p>
+            <p>or contact me directly via email: <a href="mailto:wsciubiaka@gmail.com">wsciubiaka@gmail.com</a></p>
+            <p><br></br></p>
             <p>Phone: +48 886 301 566</p>
+            <p><br></br></p>
             <p>LinkedIn: <a href="http://linkedin.com/in/adam-wsciubiak" target="_blank">linkedin.com/in/adam-wsciubiak</a></p>
         </section>
     </main>
