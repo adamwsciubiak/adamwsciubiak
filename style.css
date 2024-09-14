@@ -271,7 +271,7 @@ footer {
 /* Media query for narrower screens (below 768px) */
 @media (max-width: 2532px) {
     .header-content{
-        top: 1rem
+        top: 3rem
     }
 @media (max-width: 1170px) {
     .avatar {
