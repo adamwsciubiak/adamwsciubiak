@@ -1,76 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- Metadata for SEO and responsiveness -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Updated meta description for SEO -->
-    <meta name="description" content="Adam Wściubiak is a psychologist specializing in UX design, AI research, and cognitive-behavioral interventions. Discover his portfolio and projects.">
-
-    <!-- Page title and favicon -->
-    <title>Adam Wściubiak - Portfolio</title>
-    <!-- Favicon -->
-    <link rel="icon" href="./media/profile/favicon.png" type="image/png">
-
-    <!-- Link to external stylesheet and Font Awesome -->
-    <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-
-    <!-- Header Section -->
-    <header>
-        <div class="header-content">
-            <!-- Avatar -->
-            <div class="avatar" aria-label="Profile picture of Adam Wściubiak"></div>
-
-            <!-- Text content -->
-            <div class="text-content">
-                <!-- Main heading -->
-                <h1>Adam Wściubiak</h1>
-                <!-- Short description -->
-                <p>Psychologist with expertise in UX research, AI development, and cognitive-behavioral interventions.</p>
-
-                <!-- Social media icons -->
-                <div class="social-media-icons">
-                    <a href="https://www.instagram.com/neuromancer__/" target="_blank" aria-label="Instagram">
-                        <i class="fab fa-instagram" aria-hidden="true"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/adam-wsciubiak" target="_blank" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-                    </a>
-                    <a href="https://github.com/Neurux" target="_blank" aria-label="GitHub">
-                        <i class="fab fa-github" aria-hidden="true"></i>
-                    </a>
-                    <a href="https://www.researchgate.net/profile/Adam-Wsciubiak" target="_blank" aria-label="ResearchGate">
-                        <i class="fab fa-researchgate" aria-hidden="true"></i>
-                    </a>
-                </div>
-
-                <!-- Navigation buttons -->
-                <nav class="buttons">
-                    <!-- First line of buttons -->
-                    <div class="button-row">
-                        <a href="#about-me" class="button">About Me</a>
-                        <a href="#skills-experience" class="button">Skills & Experience</a>
-                        <a href="#projects" class="button">Projects</a>
-                    </div>
-                    <!-- Second line of buttons -->
-                    <div class="button-row">
-                        <a href="#contact" class="button">Contact</a>
-                        <a href="./media/profile/Adam Wsciubiak - CV.pdf" class="button" download>Download CV</a>
-                    </div>
-                </nav>
-            </div>
-        </div>
-    </header>
-    <!-- Main content area -->
-    <main>
-        <!-- About Me Section -->
+       <!-- About Me Section -->
         <section id="about-me">
-            <!-- Divider line -->
-            <hr class="section-divider">
             <h2>About Me</h2>
             <p>I am a psychologist with a strong focus on UX design, cognitive science, and artificial intelligence.
             I hold a Master's degree in Psychology from the University of Wrocław and a postgraduate degree in UX & Product Design from SWPS University.
@@ -81,8 +10,6 @@
 
         <!-- Skills and Experience Section -->
         <section id="skills-experience">
-            <!-- Divider line -->
-            <hr class="section-divider">
             <h2>Skills & Experience</h2>
             <!-- Skills and Experience content -->
             <div class="skills-experience-content">
@@ -109,8 +36,6 @@
 
         <!-- Projects Section -->
         <section id="projects">
-            <!-- Divider line -->
-            <hr class="section-divider">
             <h2>Projects</h2>
 
             <!-- Project 1 -->
@@ -123,8 +48,11 @@
                     </div>
                     <!-- Project description -->
                     <div class="project-description">
-                        <p>My ongoing research involves the development of an Affective Intelligent Agent Model for enhancing emotion regulation in adult learners.
-                        This AI-driven model adapts to users' emotional states to provide personalized cognitive-behavioral interventions.</p>
+                        <h3>Affective Intelligent Agent Model for Personalized Cognitive-Behavioral Interventions</h3>
+                        <h4><i>Enhancing Emotion Regulation in Adult Learners</i></h4>
+                        <p>My ongoing research involves developing an Affective Intelligent Agent Model designed to provide personalized cognitive-behavioral interventions. Recognizing that many individuals lack access to professional mental health support due to cost and availability, this AI-driven model aims to enhance emotion regulation among adult learners by dynamically adapting to users' emotional states and personality traits.
+                            
+                            The model utilizes advanced natural language processing techniques and reinforcement learning strategies to offer safe, theory-based interventions. By integrating emotion recognition and personalized action planning, it seeks to provide scalable and accessible mental health support tailored to individual needs.</p>
                     </div>
                 </div>
                 <!-- Divider line with button -->
@@ -134,7 +62,7 @@
                 </div>
                 <!-- Hidden detailed content -->
                 <div class="more-content">
-                    <!-- Detailed project description -->
+                    <!-- Placeholder for additional text and images -->
                     <h4>Project Overview</h4>
 
                     <p> In this project, I am developing an Affective Intelligent Agent Model designed to enhance emotion regulation in adult learners through personalized cognitive-behavioral interventions. Recognizing that stress significantly impacts mental health and academic success, especially among students who often lack access to professional support due to cost and availability, this research leverages advancements in artificial intelligence to provide scalable and accessible mental health solutions.
@@ -189,7 +117,6 @@
                         
                         Through this research, I aim to bridge the gap between AI advancements and practical mental health support. The Affective Intelligent Agent Model represents a significant step toward providing accessible, personalized interventions, leveraging technology to address a critical need in our society.</p>
                     <img src="./media/profile/project1-details.jpg" alt="Detailed project image">
-                    <!-- Additional images or content can be added here -->
                 </div>
             </div>
 
@@ -199,12 +126,13 @@
                 <div class="project-content reverse">
                     <!-- Project image -->
                     <div class="project-image">
-                        <img src="./media/profile/magisterka.JPG" alt="Project image of thesis work">
+                        <img src="./media/profile/nma.JPG" alt="Image of Neuromatch Academy summer school">
                     </div>
                     <!-- Project description -->
                     <div class="project-description">
-                        <p>For my Master's thesis, I explored the relationship between mindfulness and creativity in yoga practitioners.
-                        The research utilized mixed methods, combining Linguistic Inquiry and Word Count (LIWC) analysis with competent judges' ratings to assess verbal creativity.</p>
+                        <h3>Classifying Social Behaviors in Mice Using Machine Learning</h3>
+                        <h4><i>Computational Neuroscience Summer School Project</i></h4>
+                        <p>During a month-long computational neuroscience summer school, my team and I worked with datasets of video recordings capturing mice's social interactions. We compared the performance of various classical machine learning algorithms in categorizing these behaviors within a multi-agent framework. This project deepened my understanding of computational neuroscience and reinforced my interest in AI applications for behavioral analysis.</p>
                     </div>
                 </div>
                 <!-- Divider line with button -->
@@ -214,9 +142,9 @@
                 </div>
                 <!-- Hidden detailed content -->
                 <div class="more-content">
-                    <!-- Detailed project description -->
-                    <p>For my Master's thesis, titled "Mindfulness in Yoga Practitioners and Meditators and Affective-Stimulated Verbal Creativity," I utilized Linguistic Inquiry and Word Count (LIWC) to analyze participants' emotional expressions. This project provided valuable experience in mixed methods research and marked my early adoption of natural language processing in psychological studies.</p>
-                    <!-- Additional images or content can be added here -->
+                    <!-- Placeholder for additional text and images -->
+                    <p>[Detailed project description goes here.]</p>
+                    <img src="./media/profile/project2-details.jpg" alt="Detailed project image">
                 </div>
             </div>
 
@@ -226,11 +154,15 @@
                 <div class="project-content">
                     <!-- Project image -->
                     <div class="project-image">
-                        <img src="./media/profile/nma.JPG" alt="Image of Neuromatch Academy summer school">
+                        <img src="./media/profile/magisterka.JPG" alt="Project image of thesis work">
+
                     </div>
                     <!-- Project description -->
                     <div class="project-description">
-                        <p>Participated in the Neuromatch Academy Cognitive Neuroscience summer school, enhancing my understanding of computational neuroscience and AI applications in psychology.</p>
+                        <h3>Mindfulness and Creativity in Yoga Practitioners</h3>
+                        <h4><i>Exploring the Relationship Between Mindfulness and Verbal Creativity</i></h4>
+                        <p>For my Master's thesis, I investigated the relationship between mindfulness and creativity among yoga practitioners and meditators. Using a mixed methods approach, I combined Linguistic Inquiry and Word Count (LIWC) analysis with expert evaluations to assess participants' emotional expressions and verbal creativity. This research provided insights into how mindfulness practices can influence creative processes and contributed to the early application of natural language processing in psychological studies.</p>
+
                     </div>
                 </div>
                 <!-- Divider line with button -->
@@ -240,90 +172,9 @@
                 </div>
                 <!-- Hidden detailed content -->
                 <div class="more-content">
-                    <!-- Detailed project description -->
-                    <p>During a month-long computational neuroscience summer school, my team and I worked with datasets of video recordings capturing mice's social interactions. We compared the performance of various classical machine learning algorithms in categorizing these behaviors within a multi-agent framework. This project deepened my understanding of computational neuroscience and reinforced my interest in AI applications for behavioral analysis.</p>
-                    <!-- Additional images or content can be added here -->
+                    <!-- Placeholder for additional text and images -->
+                    <p>[Detailed project description goes here.]</p>
+                    <img src="./media/profile/project3-details.jpg" alt="Detailed project image">
                 </div>
             </div>
-
-            <!-- Project 4 (New project) -->
-            <div class="project">
-                <!-- Project content -->
-                <div class="project-content reverse">
-                    <!-- Project image -->
-                    <div class="project-image">
-                        <img src="./media/profile/wearable_project.JPG" alt="Image of wearable device project">
-                    </div>
-                    <!-- Project description -->
-                    <div class="project-description">
-                        <p>Analyzed data from wearable devices to identify the best methods for capturing cognitive effort in behavior-change interventions, leading to a publication on reducing self-reporting burdens in mHealth applications.</p>
-                    </div>
-                </div>
-                <!-- Divider line with button -->
-                <div class="project-divider">
-                    <hr>
-                    <button class="toggle-button">Read More</button>
-                </div>
-                <!-- Hidden detailed content -->
-                <div class="more-content">
-                    <!-- Detailed project description -->
-                    <p>At Brainhack Krakow, I participated in a project analyzing data from Muse devices and smartwatches to identify the most effective wearables for capturing cognitive effort in behavior-change interventions. Our research led to the publication "Can Gamification Reduce the Burden of Self-reporting in mHealth Applications?" (Grzeszczyk et al., 2023). This work highlighted the potential of integrating gamification and wearable technology to enhance user engagement and data accuracy in health applications.</p>
-                    <!-- Additional images or content can be added here -->
-                </div>
-            </div>
-
         </section>
-
-        <!-- Contact Section -->
-        <section id="contact">
-            <!-- Divider line -->
-            <hr class="section-divider">
-            <h2>Contact Me</h2>
-            <!-- Contact form remains unchanged -->
-            <form id="contact-form" action="https://formspree.io/f/xdknvdzk" method="POST">
-                <div>
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="_replyto" required>
-                </div>
-                <div>
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                <button type="submit">Send Message</button>
-            </form>
-            <!-- Additional contact information -->
-            <p>You can also reach me through my social media channels:</p>
-            <!-- Social media icons -->
-            <div class="social-media-icons contact-icons">
-                <a href="https://www.instagram.com/neuromancer__/" target="_blank" aria-label="Instagram">
-                    <i class="fab fa-instagram" aria-hidden="true"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/adam-wsciubiak" target="_blank" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-                </a>
-                <a href="https://github.com/Neurux" target="_blank" aria-label="GitHub">
-                    <i class="fab fa-github" aria-hidden="true"></i>
-                </a>
-                <a href="https://www.researchgate.net/profile/Adam-Wsciubiak" target="_blank" aria-label="ResearchGate">
-                    <i class="fab fa-researchgate" aria-hidden="true"></i>
-                </a>
-            </div>
-            <!-- Direct contact information -->
-            <p>Email: <a href="mailto:wsciubiaka@gmail.com">wsciubiaka@gmail.com</a></p>
-            <p>Phone: +48 886 301 566</p>
-        </section>
-    </main>
-
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2024 Adam Wściubiak. All rights reserved.</p>
-    </footer>
-
-    <!-- Link to external JavaScript file -->
-    <script src="script.js"></script>
-</body>
-</html>
