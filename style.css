@@ -184,9 +184,9 @@ section h2::before {
     flex-direction: column; /* Stack elements vertically */
     text-align: center; /* Center the text */
 }
-#about-me p, #skills-experience p, #contact p {
+/*#about-me p, #skills-experience p, #contact p {
     white-space: pre-wrap;
-}
+} */
 /* Max width and centering for text blocks in About Me and Contact sections */
 #about-me p, #contact p {
     max-width: 800px; /* Limit the width of the text */
