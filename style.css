@@ -187,7 +187,7 @@ section h2::before {
 }
 
 /* Centered content for About Me and Contact sections */
-#about-me, #contact {
+#about-me, #current-work, #contact {
     display: flex;
     flex-direction: column;
     align-items: center; /* Center content horizontally */
@@ -195,8 +195,8 @@ section h2::before {
 }
 
 /* Max width for paragraphs in About Me and Contact sections */
-#about-me p, #contact p {
-    max-width: 800px;     /* Limit the width of the text */
+#about-me p, #current-work p, #contact p {
+    /*max-width: 1600px;     /* Limit the width of the text */
     margin: 0 auto;       /* Center the content horizontally */
     font-size: 1.2rem;    /* Increase font size for readability */
     line-height: 1.8;     /* Increase line spacing */
@@ -271,7 +271,6 @@ section h2::before {
     line-height: 1.8; /* Increase line spacing */
 }
 
-/* ... Existing CSS ... */
 
 /* Divider line with button */
 .project-divider {
@@ -525,7 +524,7 @@ footer {
     }
 
     /* Adjust text in sections */
-    #about-me p, #contact p {
+    #about-me p, #current-work p, #contact p {
         font-size: 0.9rem;
     }
 
