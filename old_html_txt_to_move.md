@@ -190,4 +190,7 @@
 
 
 
-
+        
+                    I took part in multiple hackatons and conferences in the field of artificial intelligence, neuroscience and its aplication in mental well-being.
+                    Led research in UX team developing a medical documentation app that was recognized for innovation.
+                    Founded the Neuropsychology Student Club "Cerebro" at the University of Wrocław, and participated in events such as Neuromatch Academy and Brainhack Krakow.

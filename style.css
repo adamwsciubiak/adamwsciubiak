@@ -1,11 +1,11 @@
 /* ==================== Global Styles ==================== */
 :root {
-    --primary-bg: #EAE4D8;
+    --primary-bg: #eae3d7;
     --primary-text: #030303;
     --accent-color: #ffcc00d0;
-    --header-overlay: rgba(3, 3, 3, 0.5);
+    --header-overlay: #03030380;
   }
-  
+
   * {
     margin: 0;
     padding: 0;
@@ -141,10 +141,10 @@
     flex-direction: column;
     gap: 40px;
   }
-  
+
   .section-divider {
     border: none;
-    border-top: 2px solid rgba(0, 0, 0, 0.4);
+    border-top: 2px solid var(--header-overlay);
     margin: 40px 0;
   }
   
@@ -154,12 +154,14 @@
     margin-bottom: 20px;
     position: relative;
     display: inline-block;
-    margin-left: 25px;
+    padding-left: 25px;
   }
   
   section h2::before {
     content: '';
     position: absolute;
+    left: 0;
+    top: 50%;
     transform: translateY(-50%);
     width: 10px;
     height: 80%;
@@ -175,6 +177,7 @@
   
   #about-me p, #skills-experience p, #contact p {
     white-space: pre-wrap;
+    max-width: 75vw;
   }
   
   #about-me p, #current-work p, #contact p {
@@ -251,7 +254,7 @@
   
   .project-divider hr {
     border: none;
-    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    border-top: 1px solid var(--header-overlay);
     position: relative;
   }
   
@@ -263,8 +266,8 @@
     background-color: var(--primary-bg);
     color: var(--primary-text);
     padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
+    border: 0.1rem solid var(--header-overlay);
+    border-radius: 0.5rem;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
   }
@@ -280,7 +283,7 @@
     overflow: hidden;
     transition: height 0.5s ease;
     margin-top: 0;
-    background-color: #dcd4c3;
+    background-color: var(--primary-bg);
     padding: 0 15px;
     border-radius: 5px;
   }
@@ -305,22 +308,41 @@
   #contact-form {
     max-width: 600px;
     margin: 0 auto;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
   
   #contact-form div {
     margin-bottom: 15px;
+    width: 100%;
   }
   
   #contact-form label {
     font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  #contact-form input,
+  #contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  #contact-form textarea {
+    height: 150px;
   }
   
   #contact-form button {
-    background-color: var(--primary-text);
-    color: var(--primary-bg);
-    border: none;
+    background-color: transparent;
+    color: var(--primary-text);
+    border: 0.15rem solid var(--header-overlay);
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 0.5rem;
     cursor: pointer;
     font-size: 1.2rem;
     transition: background-color 0.3s ease, transform 0.3s ease;
