@@ -1,6 +1,7 @@
 /* ==================== Global Styles ==================== */
 :root {
     --primary-bg: #eae3d7;
+    --more-content-bg:#cec3b03a;
     --primary-text: #030303;
     --accent-color: #ffcc00d0;
     --header-overlay: #03030380;
@@ -21,7 +22,7 @@
     font-family: Arial, sans-serif;
     background-color: var(--primary-bg);
     color: var(--primary-text);
-    line-height: 1.6;
+    line-height: 1.75;
   }
   
   /* ==================== Header Styles ==================== */
@@ -29,7 +30,7 @@
     background-image: url('./media/profile/header-bg.jpg');
     background-size: cover;
     background-position: center;
-    min-height: 70vh;
+    min-height: 85vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -74,12 +75,12 @@
   }
   
   .text-content h1 {
-    font-size: 3rem;
+    font-size: 2.75rem;
     font-weight: bold;
   }
   
   .text-content p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-bottom: 1rem;
   }
   
@@ -283,9 +284,9 @@
     overflow: hidden;
     transition: height 0.5s ease;
     margin-top: 0;
-    background-color: var(--primary-bg);
+    background-color: var(--more-content-bg);
     padding: 0 15px;
-    border-radius: 5px;
+    border-radius: 1rem;
   }
   
   /* ==================== Contact Section Styles ==================== */
