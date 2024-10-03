@@ -1,7 +1,7 @@
 /* ==================== Global Styles ==================== */
 :root {
     --primary-bg: #eae3d7;
-    --more-content-bg:#cec3b03a;
+    --more-content-bg:#e2d9cb;
     --primary-text: #030303;
     --accent-color: #ffcc00d0;
     --header-overlay: #03030380;
@@ -186,14 +186,113 @@
     font-size: 1.2rem;
     line-height: 1.8;
   }
-  
-  .skills-experience-content {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
+  /* Container for the entire timeline */
+  #timeline-container {
+    width: 80vw;
+    height: 30vh;
+    max-height: 80vh;
+    min-height: 300px;
+    position: relative;
+    margin: 50px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: visible; /* Allow content to overflow for date labels */
   }
-  
+
+  /* Styles for the interactive circles on the timeline */
+  .timeline-circle {
+    cursor: pointer;
+    r: 8; /* Radius of the circle */
+  }
+
+  /* Color for achievement points */
+  .timeline-circle.achievement {
+    fill: gold;
+  }
+
+  /* Color for course points */
+  .timeline-circle.course {
+    fill: gray;
+  }
+
+  /* Styles for the information box that appears on click */
+  .info-box {
+    position: absolute;
+    background: white;
+    border: 2px solid gray;
+    outline: 1px solid yellow;
+    border-radius: 5px;
+    padding: 10px;
+    width: 200px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  /* Styles for the title in the info box */
+  .info-box h3 {
+    margin-top: 0;
+    font-size: 16px;
+  }
+
+  /* Styles for paragraphs in the info box */
+  .info-box p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  /* Styles for images in the info box */
+  .info-box img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Styles for the line connecting the circle to the info box */
+  .info-line {
+    pointer-events: none;
+    stroke: yellow;
+    stroke-width: 2;
+  }
+
+  /* Styles for the main timeline path */
+  .timeline-path {
+    fill: none;
+    stroke: #03030380;
+    stroke-width: 2;
+  }
+
+/* Styles for both X and Y axes */
+.x-axis,
+.y-axis {
+  opacity: 0.05; /* Reduced opacity for axis lines */
+}
+
+/* Specific styles for the date labels */
+.date-label {
+  fill: #000; /* Ensure text color is black */
+  font-size: 10px; /* Adjust font size as needed */
+  font-weight: bold; /* Make the text bold for better visibility */
+  opacity: 1; /* Full opacity for date labels */
+}
+
+/* Hide Y-axis text */
+.y-axis text {
+  display: none;
+}
+
+/* Styles for the grid lines */
+.grid line {
+  stroke: #000;
+  stroke-opacity: 0.025; /* Reduced opacity for grid lines */
+  shape-rendering: crispEdges;
+}
+
+/* Styles specific to horizontal grid lines */
+.grid.horizontal-grid line {
+  stroke-dasharray: 1, 3; /* Dashed line style */
+}
+
+
   .skills-column, .experience-column {
     width: 48%;
   }
