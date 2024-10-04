@@ -50,31 +50,63 @@ function addDurationLines(g, x, y, data) {
     // Filter data points that have an endDate
     const dataWithEndDate = data.filter(d => d.endDate);
 
-    // Define the line generator to connect 'date' and 'endDate'
-    const durationLine = d3.line()
-        .x(d => x(new Date(d.date))) // Use the start date for the x position
-        .y(d => y(d.competence)) // Use the competence level for the y position
-        .curve(d3.curveMonotoneX); // Ensure the same curve as the main path
-
     // Loop through each data point with an endDate to create duration lines
     dataWithEndDate.forEach(d => {
-        // Create the line connecting the date and endDate
-        const extendedData = [
-            { date: d.date, competence: d.competence },
-            { date: d.endDate, competence: d.competence } // Maintain the same competence at endDate
+        const startDate = new Date(d.date);
+        const endDate = new Date(d.endDate);
+
+        // Get the competence values for start and end dates
+        const startCompetence = d.competence;
+        const endCompetence = interpolateCompetence(data, startDate, endDate); // Interpolated value
+
+        // Define line data
+        const durationLineData = [
+            { date: startDate, competence: startCompetence },
+            { date: endDate, competence: endCompetence }
         ];
 
+        // Define the line generator
+        const durationLine = d3.line()
+            .x(d => x(new Date(d.date)))
+            .y(d => y(d.competence))
+            .curve(d3.curveMonotoneX); // Use the same curve as main timeline
+
+        // Add the duration line path to the SVG
         g.append('path')
-            .datum(extendedData)
+            .datum(durationLineData)
             .attr('class', 'duration-line')
-            .attr('d', durationLine) // Apply the line generator
+            .attr('d', durationLine)
             .style('stroke', 'yellow')
-            .style('stroke-width', 4) // Twice the width of the main path
+            .style('stroke-width', 4)
             .style('opacity', 0.5)
             .style('fill', 'none');
     });
 }
 
+/**
+ * Interpolates the competence level at a given endDate based on the timeline data.
+ * @param {TimelineDataPoint[]} data - The timeline data array.
+ * @param {Date} startDate - The start date of the event.
+ * @param {Date} endDate - The end date of the event.
+ * @returns {number} The interpolated competence level at the endDate.
+ */
+function interpolateCompetence(data, startDate, endDate) {
+    // Find the data points surrounding the endDate
+    const prevDataPoint = data.find(d => new Date(d.date) <= endDate);
+    const nextDataPoint = data.find(d => new Date(d.date) > endDate);
+
+    if (!prevDataPoint || !nextDataPoint) return prevDataPoint ? prevDataPoint.competence : 0;
+
+    // Compute the time difference between the two points
+    const totalDuration = new Date(nextDataPoint.date) - new Date(prevDataPoint.date);
+    const endDateOffset = endDate - new Date(prevDataPoint.date);
+
+    // Linear interpolation of competence level
+    const competenceDifference = nextDataPoint.competence - prevDataPoint.competence;
+    const interpolatedCompetence = prevDataPoint.competence + (competenceDifference * (endDateOffset / totalDuration));
+
+    return interpolatedCompetence;
+}
 function createTimeline() {
    const container = d3.select('#timeline-container');
    
