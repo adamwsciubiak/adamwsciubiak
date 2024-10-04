@@ -39,14 +39,13 @@ const timelineData = [
  */
 
 // Function to add the duration path based on date and endDate
-// Function to add the duration path based on date and endDate
 function addDurationPath(svg, timelineData, x, y) {
     const durationLine = d3.line()
         .x(d => x(new Date(d.date)))
         .y(d => y(d.competence))
-        .curve(d3.curveMonotoneX);
+        .curve(d3.curveMonotoneX); // Ensure it follows the same curve as the timeline path
 
-    // Filter out data points that don't have an endDate
+    // Filter data points with endDate and create extended data
     const extendedData = timelineData.flatMap(d => {
         if (!d.endDate) return []; // Skip if no endDate
 
@@ -54,8 +53,8 @@ function addDurationPath(svg, timelineData, x, y) {
         const endDate = new Date(d.endDate);
 
         return [
-            { date: startDate, competence: d.competence },
-            { date: endDate, competence: d.competence }
+            { date: startDate, competence: d.competence },   // Start at the event's start date
+            { date: endDate, competence: d.competence }      // End at the event's end date, maintaining competence level
         ];
     });
 
