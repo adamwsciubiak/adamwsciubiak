@@ -38,37 +38,41 @@ const timelineData = [
  * This function sets up the SVG, scales, axes, and data visualization elements.
  */
 
-// Function to add the duration path based on date and endDate
-function addDurationPath(svg, timelineData, x, y) {
+/**
+ * Adds duration lines for events that have an endDate.
+ * The line connects the 'date' and 'endDate' with the same curve as the main timeline path.
+ * @param {d3.Selection} g - The D3 selection for the main SVG group.
+ * @param {d3.ScaleTime} x - The x-scale for the chart.
+ * @param {d3.ScaleLinear} y - The y-scale for the chart.
+ * @param {TimelineDataPoint[]} data - The timeline data array.
+ */
+function addDurationLines(g, x, y, data) {
+    // Filter data points that have an endDate
+    const dataWithEndDate = data.filter(d => d.endDate);
+
+    // Define the line generator to connect 'date' and 'endDate'
     const durationLine = d3.line()
-        .x(d => x(new Date(d.date)))
-        .y(d => y(d.competence))
-        .curve(d3.curveMonotoneX); // Ensure it follows the same curve as the timeline path
+        .x(d => x(new Date(d.date))) // Use the start date for the x position
+        .y(d => y(d.competence)) // Use the competence level for the y position
+        .curve(d3.curveMonotoneX); // Ensure the same curve as the main path
 
-    // Filter data points with endDate and create extended data
-    const extendedData = timelineData.flatMap(d => {
-        if (!d.endDate) return []; // Skip if no endDate
-
-        const startDate = new Date(d.date);
-        const endDate = new Date(d.endDate);
-
-        return [
-            { date: startDate, competence: d.competence },   // Start at the event's start date
-            { date: endDate, competence: d.competence }      // End at the event's end date, maintaining competence level
+    // Loop through each data point with an endDate to create duration lines
+    dataWithEndDate.forEach(d => {
+        // Create the line connecting the date and endDate
+        const extendedData = [
+            { date: d.date, competence: d.competence },
+            { date: d.endDate, competence: d.competence } // Maintain the same competence at endDate
         ];
-    });
 
-    // Only add the duration line if there are valid points with endDate
-    if (extendedData.length > 0) {
-        svg.append('path')
+        g.append('path')
             .datum(extendedData)
-            .attr('class', 'duration-path')
-            .attr('d', durationLine)
-            .attr('stroke', 'yellow')
-            .attr('stroke-width', 4)
-            .attr('opacity', 0.5)
-            .attr('fill', 'none');
-    }
+            .attr('class', 'duration-line')
+            .attr('d', durationLine) // Apply the line generator
+            .style('stroke', 'yellow')
+            .style('stroke-width', 4) // Twice the width of the main path
+            .style('opacity', 0.5)
+            .style('fill', 'none');
+    });
 }
 
 function createTimeline() {
