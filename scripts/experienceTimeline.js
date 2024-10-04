@@ -13,7 +13,7 @@
 
 /** @type {TimelineDataPoint[]} */
 const timelineData = [
-    { date: '2016-10-01', type: 'achievement', title: 'Master Degree in Psychology', description: 'Started my studies at the University of Wrocław', competence: 10 },
+    { date: '2016-10-01', endDate: '2021-09-23', type: 'achievement', title: 'Master Degree in Psychology', description: 'Started my studies at the University of Wrocław', competence: 10 },
     { date: '2018-05-01', type: 'achievement', title: 'Originator of the Neuropsychology Student Club “Cerebro”', description: 'Founded and led a student club to explore neuropsychology', competence: 20 },
     { date: '2019-04-01', type: 'course', title: 'Neuropsychology Seminar "Mózg Aktywny"', description: 'Attended a neuropsychology seminar organized by the Polish Psychological Society', competence: 30 },
     { date: '2020-01-01', type: 'achievement', title: 'Psychologist at Foundation "Opieka i Troska"', description: '(Neuro)psychological diagnosing and therapy with patients at various life stages', competence: 40 },
@@ -37,6 +37,22 @@ const timelineData = [
  * Creates and renders the interactive timeline visualization.
  * This function sets up the SVG, scales, axes, and data visualization elements.
  */
+
+function addDurationPath(svg, timelineData, x, y) {
+    const durationLine = d3.line()
+        .x(d => x(new Date(d.date)))
+        .y(d => y(d.competence))
+        .curve(d3.curveMonotoneX);  // Same curve as the timeline path
+
+    svg.append('path')
+        .datum(timelineData)
+        .attr('class', 'duration-path')
+        .attr('d', durationLine)
+        .attr('stroke', 'yellow')      // Color of the duration path
+        .attr('stroke-width', 4)       // Twice the width of the timeline path (2px => 4px)
+        .attr('opacity', 0.5)          // Semi-transparent
+        .attr('fill', 'none');         // No fill inside the path
+}
 
 function createTimeline() {
    const container = d3.select('#timeline-container');
@@ -104,7 +120,7 @@ function createTimeline() {
 
    // Create and add the timeline path
    addTimelinePath(g, x, y, timelineData, timeDomain);
-
+   addDurationPath(g, timelineData, x, y);
    // Add interactive circles for each data point
    addDataPoints(g, x, y, timelineData);
 }
