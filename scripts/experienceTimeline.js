@@ -44,6 +44,7 @@ function addDurationPath(svg, timelineData, x, y) {
         .x(d => x(new Date(d.date)))
         .y(d => y(d.competence))
         .curve(d3.curveMonotoneX);
+    const formatDate = d3.timeFormat("%d-%m-%Y");
 
     const extendedData = timelineData.flatMap(d => {
         const startDate = new Date(d.date);
