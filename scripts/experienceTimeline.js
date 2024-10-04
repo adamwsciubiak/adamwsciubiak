@@ -39,29 +39,37 @@ const timelineData = [
  */
 
 // Function to add the duration path based on date and endDate
+// Function to add the duration path based on date and endDate
 function addDurationPath(svg, timelineData, x, y) {
     const durationLine = d3.line()
         .x(d => x(new Date(d.date)))
         .y(d => y(d.competence))
         .curve(d3.curveMonotoneX);
-    const formatDate = d3.timeFormat("%d-%m-%Y");
 
+    // Filter out data points that don't have an endDate
     const extendedData = timelineData.flatMap(d => {
+        if (!d.endDate) return []; // Skip if no endDate
+
         const startDate = new Date(d.date);
-        const endDate = new Date(d.endDate || d.date); // Use endDate or default to start date
+        const endDate = new Date(d.endDate);
+
         return [
             { date: startDate, competence: d.competence },
             { date: endDate, competence: d.competence }
         ];
     });
-    svg.append('path')
-        .datum(extendedData)
-        .attr('class', 'duration-path')
-        .attr('d', durationLine)
-        .attr('stroke', 'yellow')
-        .attr('stroke-width', 4)
-        .attr('opacity', 0.5)
-        .attr('fill', 'none');
+
+    // Only add the duration line if there are valid points with endDate
+    if (extendedData.length > 0) {
+        svg.append('path')
+            .datum(extendedData)
+            .attr('class', 'duration-path')
+            .attr('d', durationLine)
+            .attr('stroke', 'yellow')
+            .attr('stroke-width', 4)
+            .attr('opacity', 0.5)
+            .attr('fill', 'none');
+    }
 }
 
 function createTimeline() {
