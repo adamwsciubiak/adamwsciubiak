@@ -38,20 +38,29 @@ const timelineData = [
  * This function sets up the SVG, scales, axes, and data visualization elements.
  */
 
+// Function to add the duration path based on date and endDate
 function addDurationPath(svg, timelineData, x, y) {
     const durationLine = d3.line()
         .x(d => x(new Date(d.date)))
         .y(d => y(d.competence))
-        .curve(d3.curveMonotoneX);  // Same curve as the timeline path
+        .curve(d3.curveMonotoneX);
 
+    const extendedData = timelineData.flatMap(d => {
+        const startDate = new Date(d.date);
+        const endDate = new Date(d.endDate || d.date); // Use endDate or default to start date
+        return [
+            { date: startDate, competence: d.competence },
+            { date: endDate, competence: d.competence }
+        ];
+    });
     svg.append('path')
-        .datum(timelineData)
+        .datum(extendedData)
         .attr('class', 'duration-path')
         .attr('d', durationLine)
-        .attr('stroke', 'yellow')      // Color of the duration path
-        .attr('stroke-width', 4)       // Twice the width of the timeline path (2px => 4px)
-        .attr('opacity', 0.5)          // Semi-transparent
-        .attr('fill', 'none');         // No fill inside the path
+        .attr('stroke', 'yellow')
+        .attr('stroke-width', 4)
+        .attr('opacity', 0.5)
+        .attr('fill', 'none');
 }
 
 function createTimeline() {
