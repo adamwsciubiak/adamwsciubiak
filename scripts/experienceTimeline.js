@@ -13,7 +13,11 @@
 
 /** @type {TimelineDataPoint[]} */
 const timelineData = [
+<<<<<<< Updated upstream
     { date: '2016-10-01', endDate: '2021-09-23', type: 'achievement', title: 'Master Degree in Psychology', description: 'Started my studies at the University of Wrocław', competence: 10 },
+=======
+    { date: '2016-10-01', dateEnd: '2021-09-01', type: 'achievement', title: 'Master Degree in Psychology', description: 'Started my studies at the University of Wrocław', competence: 10 },
+>>>>>>> Stashed changes
     { date: '2018-05-01', type: 'achievement', title: 'Originator of the Neuropsychology Student Club “Cerebro”', description: 'Founded and led a student club to explore neuropsychology', competence: 20 },
     { date: '2019-04-01', type: 'course', title: 'Neuropsychology Seminar "Mózg Aktywny"', description: 'Attended a neuropsychology seminar organized by the Polish Psychological Society', competence: 30 },
     { date: '2020-01-01', type: 'achievement', title: 'Psychologist at Foundation "Opieka i Troska"', description: '(Neuro)psychological diagnosing and therapy with patients at various life stages', competence: 40 },
@@ -189,6 +193,7 @@ function extendTimeDomain(data) {
         new Date(timeDomain[0].getTime() - timeRange * 0.2),
         new Date(timeDomain[1].getTime() + timeRange * 0.2)
     ];
+    
 }
 
 /**
@@ -245,7 +250,11 @@ function addGrid(g, width, height, x, y) {
  * @param {d3.ScaleLinear} y - The y-scale for the chart.
  * @param {TimelineDataPoint[]} data - The timeline data array.
  * @param {Date[]} timeDomain - The extended time domain.
+
  */
+
+        // Add duration lines
+
 function addTimelinePath(g, x, y, data, timeDomain) {
     const line = d3.line()
         .x(d => x(new Date(d.date)))
@@ -262,6 +271,32 @@ function addTimelinePath(g, x, y, data, timeDomain) {
         .attr('class', 'timeline-path')
         .datum(extendedData)
         .attr('d', line);
+
+        g.selectAll('.duration-line')
+        .data(timelineData.filter(d => d.dateEnd))
+        .enter().append('path')
+        .attr('class', 'duration-line')
+        .attr('d', d => {
+            const startDate = new Date(d.date);
+            const endDate = new Date(d.dateEnd);
+
+            // Wygeneruj punkty pośrednie pomiędzy datą początkową i końcową
+            const numPoints = 10; // Możesz dostosować liczbę punktów
+            const points = [];
+            for (let i = 0; i <= numPoints; i++) {
+                const t = i / numPoints;
+                const currentDate = new Date(startDate.getTime() + t * (endDate.getTime() - startDate.getTime()));
+                // Znajdź odpowiednią wartość competence na podstawie interpolacji liniowej
+                const competence = interpolateCompetence(data, currentDate); 
+                points.push({ date: currentDate, competence });
+            }
+
+            const line = d3.line()
+                .x(p => x(p.date))
+                .y(p => y(p.competence))
+                .curve(d3.curveMonotoneX); // Użyj tej samej krzywej co dla głównej linii czasu
+
+            return line(points);
 }
 
 /**
@@ -271,6 +306,7 @@ function addTimelinePath(g, x, y, data, timeDomain) {
  * @param {d3.ScaleLinear} y - The y-scale for the chart.
  * @param {TimelineDataPoint[]} data - The timeline data array.
  */
+
 function addDataPoints(g, x, y, data) {
     const dataPoints = g.selectAll('.data-point')
         .data(data)
